@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F112ECD326AFEAE9006EAFAE /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112ECD226AFEAE9006EAFAE /* ConsoleIO.swift */; };
+		F112ECD526B01FD1006EAFAE /* ComplexNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = F112ECD426B01FD1006EAFAE /* ComplexNumber.swift */; };
 		F1A334BC26AEAA9B00EB5CEC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A334BB26AEAA9B00EB5CEC /* main.swift */; };
+		F1A334C526AEB3C200EB5CEC /* Discriminant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A334C426AEB3C200EB5CEC /* Discriminant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F112ECD226AFEAE9006EAFAE /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
+		F112ECD426B01FD1006EAFAE /* ComplexNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplexNumber.swift; sourceTree = "<group>"; };
 		F1A334B826AEAA9B00EB5CEC /* DiscriminantApp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DiscriminantApp; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A334BB26AEAA9B00EB5CEC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F1A334C426AEB3C200EB5CEC /* Discriminant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discriminant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				F1A334BB26AEAA9B00EB5CEC /* main.swift */,
+				F1A334C426AEB3C200EB5CEC /* Discriminant.swift */,
+				F112ECD426B01FD1006EAFAE /* ComplexNumber.swift */,
+				F112ECD226AFEAE9006EAFAE /* ConsoleIO.swift */,
 			);
 			path = DiscriminantApp;
 			sourceTree = "<group>";
@@ -119,7 +128,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F112ECD326AFEAE9006EAFAE /* ConsoleIO.swift in Sources */,
 				F1A334BC26AEAA9B00EB5CEC /* main.swift in Sources */,
+				F1A334C526AEB3C200EB5CEC /* Discriminant.swift in Sources */,
+				F112ECD526B01FD1006EAFAE /* ComplexNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
