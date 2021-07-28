@@ -7,8 +7,5 @@
 
 import Foundation
 
-print("Let's find out discriminant.\nax2 + bx + c = 0 \nEnter a number")
-
 let discriminant = Discriminant()
-
 discriminant.interactiveMode()

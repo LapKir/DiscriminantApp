@@ -21,7 +21,7 @@ enum OptionType: String {
     }
 }
 
-class Discriminant {
+final class Discriminant {
     
     let consoleIO = ConsoleIO()
     
@@ -55,37 +55,31 @@ class Discriminant {
     }
     
     func interactiveMode() {
-        //1
-        consoleIO.writeMessage("Welcome to Discriminant.")
-        //2
+        
+        consoleIO.writeMessage("Welcome to DiscriminantApp.\nLet's find out discriminant.\nax2 + bx + c = 0 \nEnter a number")
+        
         var shouldQuit = false
         while !shouldQuit {
-            //3
+            
             consoleIO.writeMessage("Type 's' to start or type 'q' to quit.")
             let (option, value) = getOption(consoleIO.getInput())
             
             switch option {
             case .start:
-                //4
-                consoleIO.writeMessage("Type the first number:")
+                consoleIO.writeMessage("Type the first number (a):")
                 let first = consoleIO.isNumber()
-                consoleIO.writeMessage("Type the second number:")
+                consoleIO.writeMessage("\(first)*x2 + bx + c = 0\nType the second number (b):")
                 let second = consoleIO.isNumber()
-                consoleIO.writeMessage("Type the third number:")
+                consoleIO.writeMessage("\(first)*x2 + \(second)*x + c = 0\nType the third number (c):")
                 let third = consoleIO.isNumber()
                 //5
                 let result = quadraticSolve(a: first, b: second, c: third)
-                consoleIO.writeMessage("Result is \(result))")
-                
-                
+                consoleIO.writeMessage("Square roots of the equation \(first)*x2 + \(second)*x + \(third) = 0 are \(result))")
             case .quit:
                 shouldQuit = true
-                
             default:
-                //6
                 consoleIO.writeMessage("Unknown option \(value)", to: .error)
             }
         }
     }
-    
 }

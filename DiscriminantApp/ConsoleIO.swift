@@ -12,17 +12,16 @@ enum OutputType {
     case error
 }
 
-class ConsoleIO {
+final class ConsoleIO {
     
     func writeMessage(_ message: String, to: OutputType = .standard) {
         switch to {
         case .standard:
-            print("\u{001B}[;m\(message)")
+            print("\(message)")
         case .error:
             fputs("\u{001B}[0;31m\(message)\n", stderr)
         }
     }
-    
     
     func isNumber() -> Double {
         var result: Double = 0
@@ -33,20 +32,21 @@ class ConsoleIO {
             if let number = Double(a) {
                 result = number
                 count += 1
+            } else if a.isEmpty {
+                result = 1
+                count += 1
+                print("Default number is 1")
+            } else {
+                print("Enter correct number")
             }
         }
         return result
     }
     
     func getInput() -> String {
-        // 1
         let keyboard = FileHandle.standardInput
-        // 2
         let inputData = keyboard.availableData
-        // 3
         let strData = String(data: inputData, encoding: String.Encoding.utf8)!
-        // 4
         return strData.trimmingCharacters(in: CharacterSet.newlines)
     }
-    
 }
